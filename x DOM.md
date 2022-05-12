@@ -146,3 +146,39 @@ document.getElementById("demo").innerHTML =
    ```
 
    
+
+4. 화면의 특정 영역을 동적으로 숨기거나 감추기
+
+   ```
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <script>
+           function show(){
+              // document.getElementById('content').style.visibility='';
+              document.getElementById('content').style.display=''
+           }
+           function hide(){
+               //document.getElementById('content').style.visibility='hidden';
+               document.getElementById('content').style.display='none';
+           }
+       </script>
+   </head>
+   <body>
+       <div id="content">
+           DIV 태그 출력<br/>
+        <img src='http://www.apache.org/images/ac2008us_343x114.jpg' width='300' height='250'>
+       </div>
+    
+       <button onclick="show()">div 보이기</button>
+       <button onclick="hide()">div 숨기기</button>
+    
+   </body>
+   </html>
+   ```
+
+   
