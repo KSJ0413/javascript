@@ -182,3 +182,67 @@ document.getElementById("demo").innerHTML =
    ```
 
    
+
+5.텍스트의 링크를 동적으로 변경하기
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function url(addr){
+            document.getElementById('thelink').href=addr;
+        }
+ 
+        function display(){
+            alert('display 함수가 호출 되었습니다.');
+        }
+    </script>
+</head>
+<body>
+    <a id="thelink">클릭하세요</a>
+    <button onclick="url('https://www.kma.go.kr')">기상청</button>
+    <button onclick="url('https://www.yahoo.com')">야후</button>
+    <button onclick="url('javascript:display()')">함수호출</button>
+ 
+</body>
+</html>
+```
+
+6. 텍스트를 div 태그로 감싸서 추가하기
+
+   ```
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <meta charset="UTF-8">
+    
+   <script type="text/javascript">
+    function show()
+    { 
+       // DIV 태그 검색
+       var parentdiv = document.getElementById("textHolder");
+       // 새로운 DIV 태그 생성
+       var divel = document.createElement("div");
+       // 새로운 DIV태그에 텍스트 생성
+       divel.appendChild(document.createTextNode("CBD Developer 8"));
+       // 새로운 DIV 태그를 부모 DIV 태그인 'textHolder'에 추가
+       parentdiv.appendChild(divel);
+    
+    }
+    
+   </script>
+   </head>
+   <body>
+     <input type="button" onclick="show()" value="텍스트 추가" />
+     <div id="textHolder"></div>
+   </body>
+   </html>
+    
+   ```
+
+   
