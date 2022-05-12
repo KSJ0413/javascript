@@ -245,4 +245,49 @@ document.getElementById("demo").innerHTML =
     
    ```
 
+   --------------------------
+
+   =============================================****
+
+   수업 끝나고 나머지 공부:
+
+   ```
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <style>
    
+   
+   </style>
+   <script>
+       let i=1;
+   function show(){
+       
+       let str = document.getElementById("textHolder");
+       let divl = document.createElement('div');
+       divl.innerHTML = "파일 선택 "+i+"<br>"+"<input type='file' name='file'/>";
+       str.appendChild(divl);
+       i++
+   }
+   function remove(){
+       let str = document.getElementById("textHolder");
+       let divl = document.createElement('div');
+       str.removeChild(str.lastChild);
+       i--;
+   }
+   
+   </script>
+   </head>
+   <body>
+       
+   <input  onclick="show()" type="button" name="btnAdd" value="파일 선택 추가" />
+   <input  onclick="remove()" type="button" name="btnAdd" value="파일 선택 제거" />
+   <br/>
+   <DIV id="textHolder">
+   파일 선택 1: 
+   <input type="file" name="file"/>
+   </DIV>
+   </body>
+   </html>
